@@ -54,7 +54,8 @@
     self.billValueField.layer.backgroundColor = [[UIColor orangeColor] CGColor];
     UIColor *firstColor = Rgb2UIColor(214, 206, 195);
     UIColor *secondColor = Rgb2UIColor(228, 221, 202);
-    
+    self.tipControl.tintColor = [UIColor orangeColor];
+    self.peopleCountControl.tintColor = [UIColor orangeColor];
     
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.colors = [NSArray arrayWithObjects:
