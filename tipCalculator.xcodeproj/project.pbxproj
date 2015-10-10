@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		8A79F4011BC0921F000AE2AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A79F4001BC0921F000AE2AB /* main.m */; };
 		8A79F4041BC0921F000AE2AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A79F4031BC0921F000AE2AB /* AppDelegate.m */; };
-		8A79F4071BC0921F000AE2AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A79F4061BC0921F000AE2AB /* ViewController.m */; };
+		8A79F4071BC0921F000AE2AB /* TipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A79F4061BC0921F000AE2AB /* TipViewController.m */; };
 		8A79F40A1BC0921F000AE2AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A79F4081BC0921F000AE2AB /* Main.storyboard */; };
 		8A79F40C1BC09220000AE2AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A79F40B1BC09220000AE2AB /* Images.xcassets */; };
 		8A79F40F1BC09220000AE2AB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A79F40D1BC09220000AE2AB /* LaunchScreen.xib */; };
 		8A79F41B1BC09220000AE2AB /* tipCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A79F41A1BC09220000AE2AB /* tipCalculatorTests.m */; };
+		8AA5A9081BC78C4F000CA198 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AA5A9071BC78C4F000CA198 /* SettingsViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +33,16 @@
 		8A79F4001BC0921F000AE2AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8A79F4021BC0921F000AE2AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8A79F4031BC0921F000AE2AB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8A79F4051BC0921F000AE2AB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8A79F4061BC0921F000AE2AB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8A79F4051BC0921F000AE2AB /* TipViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TipViewController.h; sourceTree = "<group>"; };
+		8A79F4061BC0921F000AE2AB /* TipViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TipViewController.m; sourceTree = "<group>"; };
 		8A79F4091BC0921F000AE2AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A79F40B1BC09220000AE2AB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8A79F40E1BC09220000AE2AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8A79F4141BC09220000AE2AB /* tipCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tipCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A79F4191BC09220000AE2AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A79F41A1BC09220000AE2AB /* tipCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tipCalculatorTests.m; sourceTree = "<group>"; };
+		8AA5A9061BC78C4F000CA198 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		8AA5A9071BC78C4F000CA198 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +86,11 @@
 			children = (
 				8A79F4021BC0921F000AE2AB /* AppDelegate.h */,
 				8A79F4031BC0921F000AE2AB /* AppDelegate.m */,
-				8A79F4051BC0921F000AE2AB /* ViewController.h */,
-				8A79F4061BC0921F000AE2AB /* ViewController.m */,
+				8A79F4051BC0921F000AE2AB /* TipViewController.h */,
+				8A79F4061BC0921F000AE2AB /* TipViewController.m */,
 				8A79F4081BC0921F000AE2AB /* Main.storyboard */,
+				8AA5A9061BC78C4F000CA198 /* SettingsViewController.h */,
+				8AA5A9071BC78C4F000CA198 /* SettingsViewController.m */,
 				8A79F40B1BC09220000AE2AB /* Images.xcassets */,
 				8A79F40D1BC09220000AE2AB /* LaunchScreen.xib */,
 				8A79F3FE1BC0921F000AE2AB /* Supporting Files */,
@@ -219,9 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A79F4071BC0921F000AE2AB /* ViewController.m in Sources */,
+				8A79F4071BC0921F000AE2AB /* TipViewController.m in Sources */,
 				8A79F4041BC0921F000AE2AB /* AppDelegate.m in Sources */,
 				8A79F4011BC0921F000AE2AB /* main.m in Sources */,
+				8AA5A9081BC78C4F000CA198 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +424,7 @@
 				8A79F4201BC09220000AE2AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A79F4211BC09220000AE2AB /* Build configuration list for PBXNativeTarget "tipCalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +433,7 @@
 				8A79F4231BC09220000AE2AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
