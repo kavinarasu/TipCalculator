@@ -31,7 +31,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Tip Controller";
+    self.title = @"Tip Calculator";
     [self updateValues];
 }
 
@@ -45,6 +45,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [self.billTextField becomeFirstResponder];
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     int tipIndex = (int) [defaults integerForKey:@"defaultTipValue"];
     BOOL shouldSplitGroup = [defaults boolForKey:@"shouldSplitGroup"];
