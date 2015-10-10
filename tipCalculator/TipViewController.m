@@ -56,7 +56,16 @@
     UIColor *secondColor = Rgb2UIColor(228, 221, 202);
     self.tipControl.tintColor = [UIColor orangeColor];
     self.peopleCountControl.tintColor = [UIColor orangeColor];
-    
+    int alphaValue = shouldSplitGroup? 1:0;
+    [UIView animateWithDuration:0.6 animations:^ {
+        self.peopleCountControl.alpha = alphaValue;
+        self.eachTipLabel.alpha = alphaValue;
+        self.eachTotalLabel.alpha = alphaValue;
+        self.eachTipLabelField.alpha = alphaValue;
+        self.eachTotalLabelField.alpha = alphaValue;
+        self.groupText.alpha = alphaValue;
+    }];
+
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.colors = [NSArray arrayWithObjects:
                        (id)firstColor.CGColor,
@@ -66,21 +75,6 @@
     
     // Add the gradient to the view
     [self.view.layer insertSublayer:gradient atIndex:0];
-    if(shouldSplitGroup) {
-        self.peopleCountControl.alpha = 1;
-        self.eachTipLabel.alpha = 1;
-        self.eachTotalLabel.alpha = 1;
-        self.eachTipLabelField.alpha = 1;
-        self.eachTotalLabelField.alpha = 1;
-        self.groupText.alpha = 1;
-    } else {
-        self.peopleCountControl.alpha = 0;
-        self.eachTipLabel.alpha = 0;
-        self.eachTotalLabel.alpha = 0;
-        self.eachTipLabelField.alpha = 0;
-        self.eachTotalLabelField.alpha = 0;
-        self.groupText.alpha = 0;
-    }
     [self.tipControl setSelectedSegmentIndex:tipIndex];
     [self updateValues];
 }
