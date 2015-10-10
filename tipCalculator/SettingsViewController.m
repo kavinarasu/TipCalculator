@@ -10,6 +10,7 @@
 
 @interface SettingsViewController ()
 @property (weak, nonatomic) IBOutlet UISegmentedControl *defaultTipControl;
+@property (weak, nonatomic) IBOutlet UISwitch *splitGroupSwitch;
 
 @end
 
@@ -18,7 +19,9 @@
 - (void)viewWillAppear:(BOOL)animated {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     int tipIndex = (int) [defaults integerForKey:@"defaultTipValue"];
+    BOOL shouldSplitGroup = [defaults boolForKey:@"shouldSplitGroup"];
     [self.defaultTipControl setSelectedSegmentIndex:tipIndex];
+    [self.splitGroupSwitch setOn:shouldSplitGroup];
 }
 
 - (void)viewDidLoad {
@@ -33,6 +36,12 @@
 - (IBAction)onValueChanged:(UISegmentedControl *)sender {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setInteger:self.defaultTipControl.selectedSegmentIndex forKey:@"defaultTipValue"];
+    [defaults synchronize];
+}
+- (IBAction)onSplitGroupValueChanged:(UISwitch *)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSLog(@" %s", self.splitGroupSwitch.on ? "true" : "false");
+    [defaults setBool:self.splitGroupSwitch.on forKey:@"shouldSplitGroup"];
     [defaults synchronize];
 }
 

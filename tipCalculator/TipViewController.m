@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *peopleCountControl;
 @property (weak, nonatomic) IBOutlet UILabel *eachTipLabel;
 @property (weak, nonatomic) IBOutlet UILabel *eachTotalLabel;
+@property (weak, nonatomic) IBOutlet UILabel *eachTipLabelField;
+@property (weak, nonatomic) IBOutlet UILabel *eachTotalLabelField;
 
 @end
 
@@ -39,6 +41,21 @@
 - (void)viewWillAppear:(BOOL)animated {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     int tipIndex = (int) [defaults integerForKey:@"defaultTipValue"];
+    BOOL shouldSplitGroup = [defaults boolForKey:@"shouldSplitGroup"];
+    NSLog(@" %s", shouldSplitGroup ? "true" : "false");
+    if(shouldSplitGroup) {
+        self.peopleCountControl.alpha = 1;
+        self.eachTipLabel.alpha = 1;
+        self.eachTotalLabel.alpha = 1;
+        self.eachTipLabelField.alpha = 1;
+        self.eachTotalLabelField.alpha = 1;
+    } else {
+        self.peopleCountControl.alpha = 0;
+        self.eachTipLabel.alpha = 0;
+        self.eachTotalLabel.alpha = 0;
+        self.eachTipLabelField.alpha = 0;
+        self.eachTotalLabelField.alpha = 0;
+    }
     [self.tipControl setSelectedSegmentIndex:tipIndex];
     [self updateValues];
 }
