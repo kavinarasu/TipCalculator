@@ -40,7 +40,7 @@ Describe any challenges encountered while building the app.
 Having been used to mostly Java programming, it was interesting to learn the syntax of Objective-C. It was quite different. I am also surprised by the transitions in iOS programming in the past few years. It looks different from what I saw a couple of years back especially the storyboard.
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2015 Kavin Arasu
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
