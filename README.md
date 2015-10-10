@@ -22,8 +22,7 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 * [ ] List anything else that you can get done to improve the app functionality!
-
-1. Dining in group? Enable 'Split Group' in setting to split the bill total among your friends.
+  - [x] Dining in group? Enable 'Split Group' in setting to split the bill total among your friends.
 
 ## Video Walkthrough 
 
