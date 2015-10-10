@@ -7,6 +7,8 @@
 //
 
 #import "SettingsViewController.h"
+#define Rgb2UIColor(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
+
 
 @interface SettingsViewController ()
 @property (weak, nonatomic) IBOutlet UISegmentedControl *defaultTipControl;
@@ -22,6 +24,20 @@
     BOOL shouldSplitGroup = [defaults boolForKey:@"shouldSplitGroup"];
     [self.defaultTipControl setSelectedSegmentIndex:tipIndex];
     [self.splitGroupSwitch setOn:shouldSplitGroup];
+    self.defaultTipControl.tintColor = [UIColor orangeColor];
+    self.splitGroupSwitch.onTintColor = [UIColor orangeColor];
+    UIColor *firstColor = Rgb2UIColor(214, 206, 195);
+    UIColor *secondColor = Rgb2UIColor(228, 221, 202);
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.colors = [NSArray arrayWithObjects:
+                       (id)firstColor.CGColor,
+                       (id)secondColor.CGColor,
+                       nil];
+    gradient.frame = self.view.bounds;
+    
+    // Add the gradient to the view
+    [self.view.layer insertSublayer:gradient atIndex:0];
+
 }
 
 - (void)viewDidLoad {
